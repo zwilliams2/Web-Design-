@@ -1,12 +1,43 @@
 body {  
     color:blue;  
+    font-size:large;
+    font-size:1.5em;
+    font-weight:bolder;
+    font-style:normal;
+    font-family:Cambria,Georgia,"Book Antiqua",serif
 }
 h2 {  
-    color:palevioletred;  
+    color:palevioletred;
+    font-weight:bolder;  
+    font-style:normal;
+    font-family:Cambria,Georgia,"Book Antiqua",serif
 }
 h1 {  
-    color:orange;  
+    color:orange; 
+    font-weight:bolder;
+    font-style:normal; 
+    font-family:Cambria,Georgia,"Book Antiqua",serif
 }
 h1 {  
     background-color: seashell;  
+    width: fit-content;
+    font-weight:bolder;
+    font-style:normal;
+    font-family:Cambria,Georgia,"Book Antiqua",serif
+
+}a:link {  
+    color:palegreen;  
+}a:visited {  
+    color:purple;  
 }
+a:hover {  
+    color:turquoise;  
+}
+a:active {  
+    color:red;  
+}
+/*change the colors of the cites on williamsassignment3.html*/
+cite {  
+    color:darkgreen;  
+}
+
