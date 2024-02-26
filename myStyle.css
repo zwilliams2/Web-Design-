@@ -67,6 +67,9 @@ img {
 /* give an element the display property set to flexbox */
 div.flexible {  
     display: flex;  
+    justify-content: space-between;  
+    margin-bottom: 1em;   
+
 }
 /* Add a header element as a Flexbox to create a navigation bar that will appear at the top of all three pages of your website. The navigation bar should contain links for at least three pages in your website. It should not be wider than the body element of your pages. */
 header {  
@@ -83,6 +86,24 @@ footer {
     margin-top: 1em;  
     text-align: center;  
 }
+/* add padding to 2 elements */
+#img1100, #img1101 {  
+    padding: 1em;  
+}
+/* set the margins of 2 elements */
+#img1100, #img1101 {  
+    margin: 1em;  
+}
+/* add changes to improve visual properties of the page */
+body {  
+    background-color: lightgray;  
+    margin: 1em;  
+    padding: 1em;  
+    border: 1px solid black;  
+    border-radius: 1em;  
+    box-shadow: 5px 5px 5px black;  
+}
+
 
 
 
