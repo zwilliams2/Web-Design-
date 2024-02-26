@@ -103,6 +103,19 @@ body {
     border-radius: 1em;  
     box-shadow: 5px 5px 5px black;  
 }
+/* add some new styles to the webpage */
+h1 {  
+    text-align: center;  
+    margin-bottom: 1em;  
+}
+/* add a new style to the webpage */
+h2 {  
+    text-align: center;  
+    margin-bottom: 1em;  
+}
+
+
+
 
 
 
