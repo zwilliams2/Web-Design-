@@ -75,7 +75,7 @@ div.flexible {
 header {  
     display: flex;  
     justify-content: space-between;  
-    background-color: black;  
+    background-color: rgb(255, 230, 0);  
     padding: 1em;  
     margin-bottom: 1em;  
 }
