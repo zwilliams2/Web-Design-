@@ -1,15 +1,104 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-         <meta charset= “utf-8”>
-         <title>Fishing Game</title>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Four Boxes Activity</title>
+<style>
+  #expandedImage {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    max-width: 90%;
+    max-height: 90%;
+  }
+</style>
+</head>
+<body>
+
+<img src="images/small-image.png" alt="Small Image" id="smallImage">
+
+<img src="images/large-image.png" alt="Expanded Image" id="expandedImage">
+
+<script>
+  const smallImage = document.getElementById('smallImage');
+  const expandedImage = document.getElementById('expandedImage');
+
+  smallImage.addEventListener('click', function() {
+    expandedImage.style.display = 'block';
+  });
+
+  expandedImage.addEventListener('click', function() {
+    expandedImage.style.display = 'none';
+  });
+
+  window.addEventListener('resize', function() {
+    if (expandedImage.style.display === 'block') {
+      fitImageToWindow();
+    }
+  });
+
+  function fitImageToWindow() {
+    const maxWidth = window.innerWidth * 0.9;
+    const maxHeight = window.innerHeight * 0.9;
+
+    const aspectRatio = expandedImage.naturalWidth / expandedImage.naturalHeight;
+
+    if (maxWidth / aspectRatio < maxHeight) {
+      expandedImage.style.width = maxWidth + 'px';
+      expandedImage.style.height = (maxWidth / aspectRatio) + 'px';
+    } else {
+      expandedImage.style.height = maxHeight + 'px';
+      expandedImage.style.width = (maxHeight * aspectRatio) + 'px';
+    }
+
+    expandedImage.style.top = '50%';
+    expandedImage.style.left = '50%';
+    expandedImage.style.transform = 'translate(-50%, -50%)';
+  }
+</script>
+
+</body>
+</html>
          <script src="testscript.js" defer></script>
-         
+         <link rel="stylesheet" href="myStyle.css">
+
 
 
    </head>
     <body>
+        <p id="firsttest">Click me to change color!</p>
+        <button id="thebutton">Click to Change Color</button>
+        <p id="buttontest">This text will change color.</p>
+        <input type="text" id="myinput" placeholder="Type something...">
+        
+        <script>
+          var myitem = document.getElementById("firsttest");
+          myitem.addEventListener("click", onClick);
+          
+          function onClick() {
+            myitem.style.color = "black";
+          }
+          
+          var thebutton = document.getElementById("thebutton");
+          var otheritem = document.getElementById("buttontest");
+          thebutton.addEventListener("click", onButtonClick);
+          
+          function onButtonClick() {
+            otheritem.style.color = "brown";
+          }
+          
+          var textentry = document.getElementById("myinput");
+          textentry.addEventListener("change", onChange);
+          
+          function onChange() {
+            var newtext = textentry.value;
+            otheritem.innerHTML = newtext;
+          }
+        </script>
         
         <h1>Activity: Fishing Game </h1>
         <p class="intro"> Mackenzie, Melina, <em>Zy&apos;Quan</em></p>
@@ -18,8 +107,6 @@
             <div class="header">Second content</div>
             <div class="header">Third content</div>
         </div>
-    <img src="images/Zy'QuansPicture.jpg" alt="Zy'Quan's Picture" width="200" height="200">
-
     
 
 <h2>Lab # 9: Autism activity</h2>
@@ -42,7 +129,7 @@ Beyond the immediate social benefits, the activity instills a sense of camarader
 
 <a href ="williamsassignment3.html">Dementia</a>
 <a href ="williamsassisgnment4.html">Four Boxes Activity</a>
-<link rel="stylesheet" href="myStyle.css">
+
 
 
     </body>

@@ -130,6 +130,31 @@ h2 {
       font-size: 16px;
     }
   }
+  /* Standard desktop browser window that takes up most of the screen (and is therefore likely in landscape orientation) */
+    @media screen and (min-width: 800px) {
+        .myElement {
+        font-size: 24px;
+        }
+    }
+    /* Smaller desktop browser window that is likely in portrait orientation */
+    @media screen and (max-width: 799px) {
+        .myElement {
+        font-size: 16px;
+        }
+    }
+    /* Tablet-sized browser window */
+    @media screen and (max-width: 600px) {
+        .myElement {
+        font-size: 12px;
+        }
+    }
+    /* Smartphone-sized browser window */
+    @media screen and (max-width: 400px) {
+        .myElement {
+        font-size: 8px;
+        }
+    }
+    
 
 
 
